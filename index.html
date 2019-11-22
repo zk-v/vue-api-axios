@@ -1,0 +1,11 @@
+<div id="app">
+
+<button v-on:click="fetchUsers()">{{ btnText }}</button>
+
+<ol v-if="fetch">
+  <li v-for="user of info">
+    {{user.name}} - {{user.address.street}}, {{user.address.zipcode}}
+  </li>
+</ol>
+
+</div>
