@@ -1,5 +1,6 @@
 // Import stylesheets
 import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Vue from 'vue';
 import axios from 'axios';
