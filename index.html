@@ -1,18 +1,15 @@
 <div id="app" class="container pt-3">
-
-<button v-on:click="fetchUsers()" class="btn btn-primary">{{ btnText }}</button>
-
-<div v-if="fetch" class="row col-sm">
-  <div v-for="user of info" class="card m-3 p-3" style="width: 18rem;">
-    <h5 class="card-title">{{ user.name }}</h5>
-    <div class="card-body">
-      <ul>
-        <li>City: {{ user.address.city }}</li>
-        <li>Street: {{ user.address.street }}</li>
-        <li>Zipcode: {{ user.address.zipcode }}</li>
-      </ul>
+  <button v-on:click="fetchUsers()" class="btn btn-primary">{{ btnText }}</button>
+  <div v-if="fetch" class="row col-sm">
+    <div v-for="user of info" class="card m-3 p-3" style="width: 18rem;">
+      <h5 class="card-title">{{ user.name }}</h5>
+      <div class="card-body">
+        <ul>
+          <li>City: {{ user.address.city }}</li>
+          <li>Street: {{ user.address.street }}</li>
+          <li>Zipcode: {{ user.address.zipcode }}</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-
 </div>
