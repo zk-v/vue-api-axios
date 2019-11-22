@@ -2,10 +2,15 @@
 
 <button v-on:click="fetchUsers()">{{ btnText }}</button>
 
-<ol v-if="fetch">
-  <li v-for="user of info">
-    {{user.name}} - {{user.address.street}}, {{user.address.zipcode}}
-  </li>
-</ol>
+<div v-if="fetch">
+  <div v-for="user of info" class="card">
+    <h2>{{ user.name }}</h2>
+    <ul>
+      <li>City: {{ user.address.city }}</li>
+      <li>Street: {{ user.address.street }}</li>
+      <li>Zipcode: {{ user.address.zipcode }}</li>
+    </ul>
+  </div>
+</div>
 
 </div>
